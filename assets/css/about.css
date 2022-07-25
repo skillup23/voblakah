@@ -1,0 +1,46 @@
+.about-url__title {
+  margin-top: 5rem;
+}
+
+.about-url__data {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.about-url__info {
+  width: 45%;
+}
+
+.about-url__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+
+.about-url__button {
+  position: relative;
+  color: var(--text-color-light);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 1.5rem 6rem 1.5rem 6rem;
+  background-color: var(--first-color);
+  box-shadow: 0 5px 2rem 0 var(--first-color);
+  border-radius: 10px;
+}
+  
+.about-url__button:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 6px 2.5rem 0 var(--first-color-alt);
+}
+
+.about-url__video {
+  width: 55%;
+  margin-bottom: 30px;
+}
+
+.about-url__video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}

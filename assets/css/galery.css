@@ -1,0 +1,16 @@
+.galery-url__title {
+    margin-top: 7rem;
+}
+
+.galery-url__data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 50px;
+}
+
+.galery-url__data img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}

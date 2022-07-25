@@ -154,6 +154,11 @@ form label {
   border-radius: 15px;
 }
 
+.border-div:hover {
+  border-color: var(--first-color-alt);
+  box-shadow: 0 5px 1rem 0 var(--first-color-alt);
+}
+
 /*=============== HEADER & NAV ===============*/
 header {
   display: flex;
@@ -164,7 +169,7 @@ header {
   inset: 20px;
   background: var(--first-color);
   width: 80px;
-  height: 45vh;
+  height: 425px;
   /* margin-top: auto;
   margin-bottom: auto; */
   border-left: 10px solid var(--first-color);
@@ -456,6 +461,30 @@ header {
   border-radius: 15px;
   z-index: 2;
 }
+.info__link:nth-child(2) {
+  background-image: url('/assets/img/card-fon2.jpg');
+}
+.info__link:nth-child(3) {
+  background-image: url('/assets/img/card-fon3.jpg');
+}
+.info__link:nth-child(4) {
+  background-image: url('/assets/img/card-fon4.jpg');
+}
+
+.menu__cards .info__link:nth-child(1) {
+  background-image: url('/assets/img/menu-fon1.jpg');
+}
+.menu__cards .info__link:nth-child(2) {
+  background-image: url('/assets/img/menu-fon2.jpg');
+  background-position: bottom;
+}
+.menu__cards .info__link:nth-child(3) {
+  background-image: url('/assets/img/menu-fon3.jpg');
+  background-position: top;
+}
+.menu__cards .info__link:nth-child(4) {
+  background-image: url('/assets/img/menu-fon4.jpg');
+}
 
 .info__link::after {
   content: '';
@@ -474,9 +503,9 @@ header {
   background: rgba(0,0,0,.1);
 }
 
-/* .info__link:hover {
+.info__link:hover {
   transform: scale(1.03);
-} */
+}
 
 .info__card {
   display: flex;
@@ -493,6 +522,7 @@ header {
   text-transform: uppercase;
   z-index: 3;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card__subscribe {
@@ -527,6 +557,9 @@ header {
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+.card__button:hover {
+  background-color: var(--first-color-alt);
+}
 
 
 
@@ -551,6 +584,10 @@ header {
   /* width: 350px; */
   cursor: pointer;
   overflow: hidden;
+}
+.galery__image:hover {
+  border-color: var(--first-color-alt);
+  box-shadow: 0 5px 1rem 0 var(--first-color-alt);
 }
 
 .galery__image img {
@@ -770,13 +807,16 @@ header {
 .youcan__column {
   box-sizing: border-box;
   width: 160px;
+  z-index: 3;
 }
 
 .youcan__column img {
-  width: 160px;
-  border: 1px solid #4c5059;
-  box-shadow: 0 0.2rem 1rem -0.3rem rgb(100 103 110);
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid #4c5059; */
+  /* box-shadow: 0 0.2rem 1rem -0.3rem rgb(100 103 110); */
   border-radius: 10px;
+  z-index: 3;
 }
 
 .youcan__column h6 {
@@ -807,7 +847,7 @@ footer:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(14, 15, 19, 0.8);
+  background: rgba(14, 15, 19, 0.9);
   z-index: 2;
 }
 
@@ -838,8 +878,8 @@ footer:after {
 /*=============== BOX ANIMATION LIGHT ===============*/
 .box-light {
   position: relative;
-  /* width: 300px; */
-  /* height: 378px; */
+  width: 160px;
+  height: 160px;
   background: rgba(0,0,0,.75);
   border-radius: 15px;
   display: flex;
