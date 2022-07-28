@@ -1,0 +1,74 @@
+.menu-url__title {
+    font-size: 2.5rem;
+}
+
+.menu-url__data {
+    display: grid;
+    grid-template-columns: repeat(5, 230px);
+    grid-template-rows: 350px;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.menu-url__card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #2c2f36;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-url__img {
+    position: absolute;
+    top: 0;
+    width: 230px;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.menu-url__card:hover .menu-url__img {
+    width: 180px;
+}
+
+.menu-url__info {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+    top: 240px;
+    transition: .5s;
+}
+
+.menu-url__card:hover .menu-url__info {
+    top: 195px;
+}
+
+.menu-url__card-title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.menu-url__price {
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--first-color);
+}
+
+.menu-url__subsribe {
+    visibility: hidden;
+    text-align: center;
+    font-size: .8rem;
+    transition: .2s;
+}
+
+.menu-url__card:hover .menu-url__subsribe {
+    visibility: visible;
+}

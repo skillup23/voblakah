@@ -37,15 +37,53 @@ toggle.onclick = function(){
 }
 
 
+/*=============== POPUP MAIN GALERY ===============*/
+let popupImg = document.querySelector('.popup__image');
+
+document.querySelectorAll('.galery__data img').forEach(image => {
+  image.onclick = () => {
+    popupImg.style.display = 'block';
+    document.querySelector('.popup__image img').src = image.getAttribute('src');
+  }
+});
+
+document.querySelector('.popup__image span').onclick = () => {
+  popupImg.style.display = 'none';
+};
+
+popupImg.addEventListener('click', (e) => {
+  if (e.target == popupImg) {
+    popupImg.style.display = 'none';
+  }
+});
+
+/*=============== POPUP MAIN CALLBACK ===============*/
+let popupCallback = document.querySelector('.popup__callback');
+
+document.querySelectorAll('.home__button').forEach(callback => {
+  callback.onclick = () => {
+    popupCallback.style.display = 'block';
+  }
+});
+
+document.querySelector('.popup__callback span').onclick = () => {
+  popupCallback.style.display = 'none';
+};
+
+popupCallback.addEventListener('click', (e) => {
+  if (e.target == popupCallback) {
+    popupCallback.style.display = 'none';
+  }
+});
 
 
 /*=============== SHOW SCROLL UP ===============*/
-function scrollUp() {
-  const scrollUp = document.getElementById('scroll-up');
-  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+// function scrollUp() {
+//   const scrollUp = document.getElementById('scroll-up');
+//   // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
+//   if (this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+// }
+// window.addEventListener('scroll', scrollUp)
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
@@ -107,91 +145,91 @@ window.addEventListener('scroll', scrollUp)
 
 
 
-/*=============== Telephone mask ===============*/
-const form = document.querySelector('.contact__form');
-const telSelector = form.querySelector('.form__tel-input');
-const inputMask = new Inputmask('+7 (999) 999-99-99');
-inputMask.mask(telSelector);
+// /*=============== Telephone mask ===============*/
+// const form = document.querySelector('.contact__form');
+// const telSelector = form.querySelector('.form__tel-input');
+// const inputMask = new Inputmask('+7 (999) 999-99-99');
+// inputMask.mask(telSelector);
 
-/*=============== Just Validate ===============*/
-const validation = new JustValidate('.contact__form',
-{
-  errorLabelStyle: {
-    color: '#ffc800',
-    textDecoration: 'underlined',
-  },
-});
+// /*=============== Just Validate ===============*/
+// const validation = new JustValidate('.contact__form',
+// {
+//   errorLabelStyle: {
+//     color: '#ffc800',
+//     textDecoration: 'underlined',
+//   },
+// });
 
-validation
-  .addField('.form__name-input', [
-    {
-      rule: 'minLength',
-      value: 3,
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Введите имя!'
-    }
-  ])
-  .addField('.form__email-input', [
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Email обязателен',
-    },
-    {
-      rule: 'email',
-      value: true,
-      errorMessage: 'Введите корректный Email',
-    },
-  ])
-  .addField('.form__tel-input', [
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Телефон обязателен',
-    },
-    {
-      rule: 'function',
-      validator: function() {
-        const phone = telSelector.inputmask.unmaskedvalue();
-        return phone.length === 10;
-      },
-      errorMessage: 'Введите корректный телефон',
-    },
-  ]).onSuccess((event) => {
-    console.log('Validation passes and form submitted', event);
+// validation
+//   .addField('.form__name-input', [
+//     {
+//       rule: 'minLength',
+//       value: 3,
+//     },
+//     {
+//       rule: 'maxLength',
+//       value: 30,
+//     },
+//     {
+//       rule: 'required',
+//       value: true,
+//       errorMessage: 'Введите имя!'
+//     }
+//   ])
+//   .addField('.form__email-input', [
+//     {
+//       rule: 'required',
+//       value: true,
+//       errorMessage: 'Email обязателен',
+//     },
+//     {
+//       rule: 'email',
+//       value: true,
+//       errorMessage: 'Введите корректный Email',
+//     },
+//   ])
+//   .addField('.form__tel-input', [
+//     {
+//       rule: 'required',
+//       value: true,
+//       errorMessage: 'Телефон обязателен',
+//     },
+//     {
+//       rule: 'function',
+//       validator: function() {
+//         const phone = telSelector.inputmask.unmaskedvalue();
+//         return phone.length === 10;
+//       },
+//       errorMessage: 'Введите корректный телефон',
+//     },
+//   ]).onSuccess((event) => {
+//     console.log('Validation passes and form submitted', event);
 
-    console.log(event)
+//     console.log(event)
     
-    let formData = new FormData(event.target);
+//     let formData = new FormData(event.target);
 
-    console.log(...formData);
+//     console.log(...formData);
 
-    let xhr = new XMLHttpRequest();
+//     let xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          success();
-        }
-      }
-    }
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState === 4) {
+//         if (xhr.status === 200) {
+//           success();
+//         }
+//       }
+//     }
 
-    xhr.open('POST', 'mail.php', true);
-    xhr.send(formData);
+//     xhr.open('POST', 'mail.php', true);
+//     xhr.send(formData);
 
-    event.target.reset();
-  });
+//     event.target.reset();
+//   });
 
-  function success() {
-    swal({
-      title: "Сообщение успешно отправлено",
-      icon: "success",
-    });
-  }
+//   function success() {
+//     swal({
+//       title: "Сообщение успешно отправлено",
+//       icon: "success",
+//     });
+//   }

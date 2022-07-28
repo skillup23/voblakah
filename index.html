@@ -21,6 +21,9 @@
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css">
 
+  <link rel="stylesheet" href="colorbox.css">
+  <script src="/assets/js/jquery/jquery.min.js"></script>
+
   <title>В Облаках</title>
 </head>
 
@@ -42,7 +45,7 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#menu">
             <span class="nav__icon"><i class='bx bx-dish'></i></i></i></span>
             <span class="nav__title">Меню</span>
           </a>
@@ -54,55 +57,14 @@
           </a>
         </li>
         <li>
-          <a href="">
-            <span class="nav__icon"><i class='bx bx-home-alt-2'></i></span>
+          <a href="#contact">
+            <span class="nav__icon"><i class='bx bx-phone-call' ></i></span>
             <span class="nav__title">Контакты</span>
           </a>
         </li>
       </ul>
       <div class="nav__toggle"></div>
     </div>
-    <!-- <nav class="nav container">
-
-      <div class="nav__menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#home" class="nav__link active-link">
-              <i class='bx bx-home-alt-2'></i>
-              <span>Главная</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#about" class="nav__link">
-              <i class='bx bx-network-chart'></i>
-              <span>О нас</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#catalog" class="nav__link">
-              <i class='bx bx-receipt'></i>
-              <span>Каталог</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#work" class="nav__link">
-              <i class='bx bx-briefcase'></i>
-              <span>Этапы работы</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">
-              <i class='bx bx-phone'></i>
-              <span>Контакты</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
   </header>
 
   <!--==================== MAIN ====================-->
@@ -132,7 +94,7 @@
         <h2 class="info__title section-title">Живой отдых</h2>
         <div class="info__cards">
 
-          <a href="#" class="info__link border-div">
+          <a href="/galery.html" class="info__link border-div">
             <div class="info__card">
               <h3 class="card__title">Интерьер</h3>
               <p class="card__subscribe">В Облаках вас порадуют роскошные интерьеры, уютная обстановка, которая
@@ -141,7 +103,7 @@
             </div>
           </a>
 
-          <a href="#" class="info__link border-div">
+          <a href="/galery.html" class="info__link border-div">
             <div class="info__card">
               <h3 class="card__title">Приятная атмосфера</h3>
               <p class="card__subscribe">У нас вы можете делать всё, что вам хочется - устраивать сеансы
@@ -151,7 +113,7 @@
             </div>
           </a>
 
-          <a href="#" class="info__link border-div">
+          <a href="/galery.html" class="info__link border-div">
             <div class="info__card">
               <h3 class="card__title">Красивые гости</h3>
               <p class="card__subscribe">В Облаках - это красивое место для красивых людей. Наши завсегдатаи -
@@ -161,10 +123,10 @@
             </div>
           </a>
 
-          <a href="#" class="info__link border-div">
+          <a href="/galery.html" class="info__link border-div">
             <div class="info__card">
               <h3 class="card__title">Игры</h3>
-              <p class="card__subscribe">Вы можете насладиться трансляциями на широкоэкранном ТВ, поиграть в видеоигры 
+              <p class="card__subscribe">Вы можете насладиться трансляциями на широкоэкранном ТВ, поиграть в видеоигры
                 и настольные игры. А различные интерьеры заведения станут отличным фоном для фото в соц.сетях.</p>
             </div>
           </a>
@@ -173,7 +135,7 @@
 
         </div>
 
-        <h2 class="info__title section-title">Меню</h2>
+        <h2 class="info__title section-title" id="menu">Меню</h2>
         <div class="info__cards menu__cards">
 
           <a href="#" class="info__link border-div">
@@ -186,7 +148,7 @@
             </div>
           </a>
 
-          <a href="#" class="info__link border-div">
+          <a href="/napitki.html" class="info__link border-div">
             <div class="info__card">
               <i class='bx bx-drink'></i>
               <h3 class="card__title">Напитки</h3>
@@ -196,7 +158,7 @@
             </div>
           </a>
 
-          <a href="#" class="info__link border-div">
+          <a href="/teacoffee.html" class="info__link border-div">
             <div class="info__card">
               <i class='bx bx-coffee'></i>
               <h3 class="card__title">Кофе и чай</h3>
@@ -249,7 +211,7 @@
               столик В Облаках! Вас ждет атмосферная обстановка, хиты танцпола, лучшие видеоигры и настолки, вкусная
               еда, закуски, снеки, напитки, кальянный микс на любой вкус. Позвоните нам или отправьте сообщение, чтобы
               сделать бронь! Устройте себе праздник прямо сейчас, пока не заняли все столики.</p>
-            <a href="#" class="home__button callback__button button"><span>Забронировать столик</span></a>
+            <a class="home__button callback__button button"><span>Забронировать столик</span></a>
           </div>
           <img src="/assets/img/back-frukt-logo.png" alt="" class="callback__column callback__img border-div">
         </div>
@@ -274,17 +236,17 @@
               <i class='bx bx-map'></i>
               <h3 class="contact__text">Славянск-на-Кубани, ул. Отдельская, 257/9к2</h3>
             </div>
-            <a href="#" class="contact__tel contact__data-row">
+            <a href="tel:79883453665" class="contact__tel contact__data-row" >
               <i class='bx bx-phone'></i>
-              <h5 class="contact__text">+7 (000) 00-00-00</h5>
+              <h5 class="contact__text">+7 (988) 345-36-65</h5>
             </a>
-            <a href="#" class="contact__whatsup contact__data-row">
+            <a href="https://wa.clck.bar/79883453665" target="_blank" class="contact__whatsup contact__data-row">
               <i class='bx bxl-whatsapp'></i>
-              <h5 class="contact__text">+7 (000) 00-00-00</h5>
+              <h5 class="contact__text">+7 (988) 345-36-65</h5>
             </a>
             <a href="#" class="contact__telegram contact__data-row">
               <i class='bx bxl-telegram'></i>
-              <h5 class="contact__text">+7 (000) 00-00-00</h5>
+              <h5 class="contact__text">+7 (988) 345-36-65</h5>
             </a>
           </div>
           <div class="contact__map border-div">
@@ -305,7 +267,8 @@
           <div class="youcan__column">
             <div class="box-light">
               <span></span>
-              <img src="/assets/img/icons8-play-station.svg" alt="PS">
+              <i class='bx bx-joystick'></i>
+              <!-- <img src="/assets/img/icons8-play-station.svg" alt="PS"> -->
             </div>
             <h6>Поиграть</h6>
           </div>
@@ -313,7 +276,8 @@
           <div class="youcan__column">
             <div class="box-light">
               <span></span>
-              <img src="/assets/img/youcan6.png" alt="youcan">
+              <!-- <img src="/assets/img/youcan6.png" alt="youcan"> -->
+              <i class='bx bx-speaker'></i>
             </div>
             <h6>Послушать музыку</h6>
           </div>
@@ -379,22 +343,100 @@
     <img src="/assets/img/galery-1.jpg" alt="">
   </div>
 
+  <div class="popup__callback">
+    <div class="popup__callback-data">
+      <span>&times;</span>
+      <h3 class="popup__callback-title">Забронировать столик</h3>
+      <h6 class="popup__callback-subtitle">Для того чтобы забронировать столик напишите нам в чат или позвоните по телефону.</h6>
+      <div class="popup__callback-buttons">
+        <a href="https://wa.clck.bar/79883453665" class="popup__callback-button" target="_blank"><i class='bx bxl-whatsapp'></i>WhatsApp</a>
+        <a href="tel:79883453665" class="popup__callback-button"><i class='bx bx-phone'></i>+7 (988) 345-36-65</a>
+      </div>
+      <p class="popup__callback-subsribe">Внимание! Написав или позвонив нам, вы выражаете согласие на обработку персональных данных
+        в соответсвии с <a href="">Политикой конфиденциальности</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- <div id="text-popup-load-window" class="zoom-anim-dialog swing animated white-popup mfp-hide">
+    <p>А это показ модального окна через 10 сек. после загрузки страницы. Показ окна привязан к cookie браузера, время жизни - 3 дня.</p>
+  </div> -->
+
+  <!-- <div class="modalInner">
+    <section class="offer">
+     <h2>Здесь будет ваше предложение, форма и т.п.</h2>
+     <p>Можете вставить форму или предложить подписаться на вас в социальных сетях</p>
+    </section>
+   </div> -->
+
   <!--=============== MAIN JS ===============-->
   <script src="assets/js/main.js"></script>
 
+  <!-- <script src="/assets/js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/jquery/jquery.cookie.js"></script>
+
   <script>
-    document.querySelectorAll('.galery__data img').forEach(image => {
-      image.onclick = () => {
-        document.querySelector('.popup__image').style.display = 'block';
-        document.querySelector('.popup__image img').src = image.getAttribute('src');
-      }
-    });
-
-    document.querySelector('.popup__image span').onclick = () => {
-      document.querySelector('.popup__image').style.display = 'none';
-    }
-
+    (function($) {
+      $(function() {
+        if (!$.cookie('smartCookies')) {
+   
+          function getWindow(){
+            $('.offer').arcticmodal({
+              closeOnOverlayClick: false,
+              closeOnEsc: true
+            });
+          };
+   
+          setTimeout (getWindow, 3000);
+        }
+   
+        $.cookie('smartCookies', true, {
+          expires: 180, 
+          path: '/'
+        });
+   
+      })
+    })(jQuery)
   </script>
+  
+  <script src="/assets/js/jquery/jquery.arcticmodal.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <script src="/assets/js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/jquery/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/jquery/jquery.cookie.js"></script>
+
+  <script>
+    jQuery(document).ready(function($) {
+     var cookieOptions = { expires: 3, path: '/' };
+     if ($.cookie('visit') == undefined) {
+       setTimeout(function() {
+       $.cookie('visit', true, cookieOptions);
+       $.magnificPopup.open({
+       items: {
+       src: $('#text-popup-load-window'), // может быть HTML строкой, jQuery объектом, или CSS селектором 
+       },
+       type: 'inline',
+       removalDelay: 300
+       });
+     }, 1000);
+    }
+    }); // end ready
+    </script> -->
 
 
 </body>
