@@ -760,6 +760,10 @@ header {
   display: none;
 }
 
+.popup__callback-active {
+  display: block;
+}
+
 .popup__callback span {
   position: absolute;
   top: -60px;
@@ -838,6 +842,25 @@ header {
 @media (max-width: 925px){
   
 }
+
+
+/* Age 18 popap */
+.popup__age {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup__age-active {
+  display: block;
+}
+
+
 
 /*=============== CONTACT ===============*/
 

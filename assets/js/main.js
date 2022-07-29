@@ -37,44 +37,58 @@ toggle.onclick = function(){
 }
 
 
-/*=============== POPUP MAIN GALERY ===============*/
-let popupImg = document.querySelector('.popup__image');
+/*=============== POPUP 18 AGE ===============*/
+window.addEventListener('DOMContentLoaded', () => {
 
-document.querySelectorAll('.galery__data img').forEach(image => {
-  image.onclick = () => {
-    popupImg.style.display = 'block';
-    document.querySelector('.popup__image img').src = image.getAttribute('src');
+  const cookieStorage = {
+    getItem: (key) => {
+      const cookie = document.cookie.split(';')
+                                    .map(cookie => cookie.split('='))
+                                    .reduce((acc, [key, value]) => ({...acc, [key.trim()] : value}), {});
+
+      return cookie[key];
+    },
+    setItem: (key, value) => {
+      const date = new Date();
+      date.setDate(date.getDate() + 2)
+
+      document.cookie = `${key}=${value};expires=${date}`;/*expires - время жизни cookie*/
+    }
   }
+
+
+  /*Можно использоватль sessionStorage - время жизни после закрытия браузера или вкладки
+  localStorage - время жизни бесконечно, только при самостоятельной очистки или дописать в коде или удалить браузер
+  cookieStorage - время жизни задается параметром expires*/
+  const storageType = cookieStorage;
+  const consentPropertyType = 'age_18';
+
+  const hasAge = () => storageType.getItem(consentPropertyType) === "true" ? true : false;
+  const toggleStorage = (prop) => storageType.setItem(consentPropertyType, prop);
+
+  const popupAge = document.querySelector('.popup__age'),
+        btnConfirm = document.querySelector('[data-confirm]'),
+        btnCancel = document.querySelector('[data-cancel]');
+
+  if (hasAge()) {
+    // если значение hasAge true - то ничего не показываем
+  } else {
+    popupAge.classList.add('popup__age-active');
+  }
+
+  // если нажали ДА - то убираем попап и доваляем true в cookie
+  btnConfirm.addEventListener('click', () => {
+    toggleStorage(true);
+    popupAge.classList.remove('popup__age-active');
+  })
+
+  // если нажали НЕТ - то оставляем попап и доваляем false в cookie
+  btnCancel.addEventListener('click', () => {
+    toggleStorage(false);
+    popupAge.classList.add('popup__age-active');
+  })
 });
 
-document.querySelector('.popup__image span').onclick = () => {
-  popupImg.style.display = 'none';
-};
-
-popupImg.addEventListener('click', (e) => {
-  if (e.target == popupImg) {
-    popupImg.style.display = 'none';
-  }
-});
-
-/*=============== POPUP MAIN CALLBACK ===============*/
-let popupCallback = document.querySelector('.popup__callback');
-
-document.querySelectorAll('.home__button').forEach(callback => {
-  callback.onclick = () => {
-    popupCallback.style.display = 'block';
-  }
-});
-
-document.querySelector('.popup__callback span').onclick = () => {
-  popupCallback.style.display = 'none';
-};
-
-popupCallback.addEventListener('click', (e) => {
-  if (e.target == popupCallback) {
-    popupCallback.style.display = 'none';
-  }
-});
 
 
 /*=============== SHOW SCROLL UP ===============*/

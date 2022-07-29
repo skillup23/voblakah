@@ -21,9 +21,6 @@
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <link rel="stylesheet" href="colorbox.css">
-  <script src="/assets/js/jquery/jquery.min.js"></script>
-
   <title>В Облаках</title>
 </head>
 
@@ -190,7 +187,7 @@
         <a href="/galery.html">
           <h2 class="galery__title section-title">Галерея</h2>
         </a>
-        <div class="galery__data">
+        <div class="galery__data" id="galery__data">
           <div class="galery__image border-div gallery__item--1"><img src="/assets/img/galery-1.jpg" alt=""></div>
           <div class="galery__image border-div gallery__item--2"><img src="/assets/img/galery-2.jpg" alt=""></div>
           <div class="galery__image border-div gallery__item--3"><img src="/assets/img/galery-3.jpg" alt=""></div>
@@ -329,7 +326,7 @@
         </span>
 
         <div class="footer__privacy">
-          <a href="#">Политика конфиденциальности</a>
+          <a href="/privacy.html">Политика конфиденциальности</a>
         </div>
       </div>
 
@@ -343,6 +340,8 @@
     <img src="/assets/img/galery-1.jpg" alt="">
   </div>
 
+
+  <!--==================== POPUP CALLBACK ====================-->
   <div class="popup__callback">
     <div class="popup__callback-data">
       <span>&times;</span>
@@ -353,90 +352,28 @@
         <a href="tel:79883453665" class="popup__callback-button"><i class='bx bx-phone'></i>+7 (988) 345-36-65</a>
       </div>
       <p class="popup__callback-subsribe">Внимание! Написав или позвонив нам, вы выражаете согласие на обработку персональных данных
-        в соответсвии с <a href="">Политикой конфиденциальности</a>.
+        в соответсвии с <a href="/privacy.html">Политикой конфиденциальности</a>.
       </p>
     </div>
   </div>
 
-  <!-- <div id="text-popup-load-window" class="zoom-anim-dialog swing animated white-popup mfp-hide">
-    <p>А это показ модального окна через 10 сек. после загрузки страницы. Показ окна привязан к cookie браузера, время жизни - 3 дня.</p>
-  </div> -->
 
-  <!-- <div class="modalInner">
-    <section class="offer">
-     <h2>Здесь будет ваше предложение, форма и т.п.</h2>
-     <p>Можете вставить форму или предложить подписаться на вас в социальных сетях</p>
-    </section>
-   </div> -->
+  <!--==================== POPUP 18 AGE ====================-->
+  <div class="popup__age">
+    <div class="popup__callback-data">
+      <h3 class="popup__callback-title">Вам уже есть 18 лет?</h3>
+      <h6 class="popup__callback-subtitle">нажмите на кнопку ниже</h6>
+      <div class="popup__callback-buttons">
+        <button class="popup__callback-button" data-confirm>ДА</button>
+        <a href="https://yandex.ru/" class="popup__callback-button" data-cancel>НЕТ</a>
+      </div>
+    </div>
+  </div>
 
   <!--=============== MAIN JS ===============-->
   <script src="assets/js/main.js"></script>
-
-  <!-- <script src="/assets/js/jquery/jquery-3.6.0.min.js"></script>
-  <script src="/assets/js/jquery/jquery.cookie.js"></script>
-
-  <script>
-    (function($) {
-      $(function() {
-        if (!$.cookie('smartCookies')) {
-   
-          function getWindow(){
-            $('.offer').arcticmodal({
-              closeOnOverlayClick: false,
-              closeOnEsc: true
-            });
-          };
-   
-          setTimeout (getWindow, 3000);
-        }
-   
-        $.cookie('smartCookies', true, {
-          expires: 180, 
-          path: '/'
-        });
-   
-      })
-    })(jQuery)
-  </script>
-  
-  <script src="/assets/js/jquery/jquery.arcticmodal.js"></script> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <script src="/assets/js/jquery/jquery-3.6.0.min.js"></script>
-  <script src="/assets/js/jquery/jquery.magnific-popup.min.js"></script>
-  <script src="/assets/js/jquery/jquery.cookie.js"></script>
-
-  <script>
-    jQuery(document).ready(function($) {
-     var cookieOptions = { expires: 3, path: '/' };
-     if ($.cookie('visit') == undefined) {
-       setTimeout(function() {
-       $.cookie('visit', true, cookieOptions);
-       $.magnificPopup.open({
-       items: {
-       src: $('#text-popup-load-window'), // может быть HTML строкой, jQuery объектом, или CSS селектором 
-       },
-       type: 'inline',
-       removalDelay: 300
-       });
-     }, 1000);
-    }
-    }); // end ready
-    </script> -->
+  <script src="assets/js/galery-main.js"></script>
+  <script src="assets/js/callback.js"></script>
 
 
 </body>
