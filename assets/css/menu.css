@@ -72,3 +72,38 @@
 .menu-url__card:hover .menu-url__subsribe {
     visibility: visible;
 }
+
+
+@media screen and (max-width: 1400px){
+    .menu-url__data{
+        grid-template-columns: repeat(4, 230px);
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .menu-url__data{
+        grid-template-columns: repeat(3, 230px);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .menu-url__data{
+        grid-template-columns: repeat(2, 230px);
+    }
+}
+
+@media screen and (max-width: 595px){
+    .menu-url {
+        padding-left: 2rem;
+    }
+    .menu-url__data{
+        grid-template-columns: repeat(1, 230px);
+    }
+    .menu-url__title {
+        text-align: center;
+        font-size: 2rem;
+        width: 200px;
+        justify-self: center;
+    }
+}
+  

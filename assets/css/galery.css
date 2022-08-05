@@ -15,3 +15,10 @@
     height: 100%;
     border-radius: 15px;
 }
+
+
+@media screen and (max-width: 820px){
+    .galery-url__title {
+        font-size: 1.5rem;
+    }
+  }
