@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/Logo-white.svg" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+
+    <title>Кальяны</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <div class="nav__menu">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="nav__icon"><i class='bx bx-home-alt-2'></i></span>
+                        <span class="nav__title">Главная</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about.html">
+                        <span class="nav__icon"><i class='bx bx-cloud'></i></i></span>
+                        <span class="nav__title">О нас</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#menu">
+                        <span class="nav__icon"><i class='bx bx-dish'></i></i></i></span>
+                        <span class="nav__title">Меню</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/galery.html">
+                        <span class="nav__icon"><i class='bx bx-images'></i></i></span>
+                        <span class="nav__title">Галерея</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#contact">
+                        <span class="nav__icon"><i class='bx bx-phone-call'></i></span>
+                        <span class="nav__title">Контакты</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav__toggle"></div>
+        </div>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <div class="menu-url container grid">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs__button">
+                    <i class='bx bx-home-alt-2'></i>
+                </a>
+                <i class='bx bx-chevron-right'></i>
+                <a href="/#menu" class="breadcrumbs__button">
+                    <span>Меню</span>
+                </a>
+                <i class='bx bx-chevron-right'></i>
+                <a href="/kalyan.html" class="breadcrumbs__button">
+                    <span>Кальяны</span>
+                </a>
+            </div>
+            <h2 class="menu-url__title section-title">Кальяны</h2>
+            <div class="menu-url__data">
+
+                <div class="menu-url__card border-div">
+                    <img src="/assets/img/kalyan/kalyan-1.jpg" class="menu-url__img"></img>
+                    <div class="menu-url__info">
+                        <h4 class="menu-url__card-title">Кальян <br>классический</h4>
+                        <h5 class="menu-url__price">1000 &#8381;</h5>
+                        <p class="menu-url__subsribe">Вкус табака на выбор</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+
+    <footer>
+        <div class="footer__data container">
+            <img class="footer__logo" src="/assets/img/Logo-white-gorizont.svg" alt="лого в облаках">
+            <div class="footer__info">
+                <span class="footer__copy">
+                    &#169;2022 IT KIREEV. Все права защищены +18
+                </span>
+
+                <div class="footer__privacy">
+                    <a href="/privacy.html">Политика конфиденциальности</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--==================== POPUP 18 AGE ====================-->
+    <div class="popup__age">
+        <div class="popup__callback-data">
+            <h3 class="popup__callback-title">Вам уже есть 18 лет?</h3>
+            <h6 class="popup__callback-subtitle">нажмите на кнопку ниже</h6>
+            <div class="popup__callback-buttons">
+                <button class="popup__callback-button" data-confirm>ДА</button>
+                <a href="https://yandex.ru/" class="popup__callback-button" data-cancel>НЕТ</a>
+            </div>
+        </div>
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
