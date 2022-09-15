@@ -15,7 +15,8 @@
   --text-color: hsl(0,0%,10%);
   --text-color-light: #fff;
   --border-color: hsl(228, 99%, 98%);
-  --body-color: #2e303c;
+  /* --body-color: #2e303c; */
+  --body-color: black;
   --body-color-black: #2c2f36;
   --container-color: #fff;
 
@@ -201,8 +202,9 @@ header {
   margin-top: 30px;
 }
 .nav__menu ul li:hover {
-  background: var(--text-color-light);
-  color: var(--text-color);
+  /* background: var(--text-color-light); */
+  background: var(--first-color-alt);
+  /* color: var(--text-color); */
 }
 .nav__menu ul li:hover::before {
   content: '';
@@ -213,7 +215,7 @@ header {
   height: 20px;
   background: transparent;
   border-bottom-right-radius: 20px;
-  box-shadow: 7.5px 7.5px 0 7.5px white;
+  box-shadow: 7.5px 7.5px 0 7.5px var(--first-color-alt);
 }
 .nav__menu ul li:hover::after {
   content: '';
@@ -224,7 +226,7 @@ header {
   height: 20px;
   background: transparent;
   border-top-right-radius: 20px;
-  box-shadow: 7.5px -7.5px 0 7.5px white;
+  box-shadow: 7.5px -7.5px 0 7.5px var(--first-color-alt);
 }
 
 .nav__menu ul li a {
@@ -315,10 +317,10 @@ header {
 
 /*=============== HOME ===============*/
 .home {
-  background-image: url('/assets/img/image-1.jpg');
+  background-image: url('/assets/img/fon-kaliyan3.jpg');
   position: relative;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center top;
   background-size: cover;
 }
 
@@ -465,8 +467,8 @@ header {
 
 /*=============== INFO ===============*/
 .info {
-  background: url('/assets/img/smoke-background-left.png') no-repeat top -25% left -40%,
-   url('/assets/img/smoke-background-right.png') no-repeat bottom -110% right -30%;
+  background: url('/assets/img/smoke-background-left2.jpg') no-repeat top 10% left 0,
+   url('/assets/img/smoke-background-right3.jpg') no-repeat bottom 0 right 0;
    background-size: 45%;
 }
 
@@ -604,6 +606,11 @@ header {
 
 
 /*=============== GALERY ===============*/
+.galery {
+  background: url('/assets/img/smoke-background-left2.jpg') no-repeat top 50% left -30%;
+  background-size: 45%;
+}
+
 .galery a {
   width: 200px;
 }
@@ -723,6 +730,8 @@ header {
 
 .callback {
   padding-top: 5rem;
+  background: url('/assets/img/smoke-background-right4.jpg') no-repeat top 0 right 0;
+  background-size: 30%;
 }
 
 .callback__columns {
@@ -866,6 +875,8 @@ header {
 
 .contact {
   padding-top: 5rem;
+  background: url('/assets/img/smoke-background-left3.jpg') no-repeat bottom 0 left -15%;
+  background-size: 30%;
 }
 
 .contact__columns {
@@ -948,6 +959,12 @@ header {
 
 /*=============== YOUCAN ===============*/
 
+.youcan {
+  background: url('/assets/img/smoke-background-left2.jpg') no-repeat bottom 0 left 0;
+  background-size: 30%;
+  padding-bottom: 5rem;
+}
+
 .youcan__title {
   text-align: center;
 }
@@ -989,16 +1006,17 @@ header {
 
 footer {
   position: relative;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding: 3rem 0 3rem 0;
-  background-image: url('/assets/img/footer-backgraund.jpg');
+  /* background-image: url('/assets/img/footer-backgraund.jpg');
+  background: url('/assets/img/smoke-background-right2.jpg') no-repeat bottom 0 right 0;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 40%; */
   z-index: 1;
 }
 
-footer:after {
+/* footer:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1007,7 +1025,7 @@ footer:after {
   height: 100%;
   background: rgba(14, 15, 19, 0.9);
   z-index: 2;
-}
+} */
 
 .footer__data {
   display: flex;
@@ -1018,6 +1036,13 @@ footer:after {
   width: 500px;
   align-self: center;
   z-index: 3;
+}
+
+.footer__fon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
 }
 
 .footer__info {
@@ -1477,6 +1502,9 @@ footer:after {
     padding-right: 2rem;
   }
 
+  .home {
+    background-position: 65% bottom;
+  }
   .home__subtitle {
     width: 300px;
   }
@@ -1485,6 +1513,11 @@ footer:after {
     padding: 1rem 2rem;
   }
 
+  .info {
+    background: url('/assets/img/smoke-background-left2.jpg') no-repeat top 1% left 0,
+    url('/assets/img/smoke-background-right3.jpg') no-repeat bottom 48% right -100px;
+    background-size: 95%;
+  }
   .info__cards {
     grid-template-columns: 1fr;
   }
@@ -1502,6 +1535,10 @@ footer:after {
     font-size: .9rem;
   }
 
+  .galery {
+    background: url('/assets/img/smoke-background-left2.jpg') no-repeat top 2% left 0;
+    background-size: 95%;
+  }
   .gallery__item--1 {
     grid-column-start: 1;
     grid-column-end: 9;
@@ -1531,6 +1568,11 @@ footer:after {
     grid-column-end: 9;
     grid-row-start: 36;
     grid-row-end: 45;
+  }
+
+  .callback {
+    background: url('/assets/img/smoke-background-right4.jpg') no-repeat top 0 right 0;
+    background-size: 55%;
   }
 
   .footer__copy {
@@ -1567,6 +1609,16 @@ footer:after {
     font-size: .7rem;
   }
 
+  .contact {
+    padding-top: 5rem;
+    background: url(/assets/img/smoke-background-left3.jpg) no-repeat top 0 left 0;
+    background-size: 60%;
+  }
+
+  .youcan {
+    background: url(/assets/img/smoke-background-left2.jpg) no-repeat top 15% left 0;
+    background-size: 80%;
+  }
   .youcan__column {
     width: 100px;
   }
@@ -1648,4 +1700,4 @@ footer:after {
 
 .offer p{
   font: 400 0.9em 'Roboto', 'Tahoma', sans-serif;
-} */
+} *
